@@ -1,0 +1,106 @@
+/* DIG24 Assignment 3, by Aaron Bramich, Curtin Student #19366050 */
+
+html
+{
+    font-family: Calibri, Arial, Serif;
+}
+
+body
+{
+    display: block;
+    
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+    width: 100%;
+    height: 100%;
+    
+    background-color: #5A5A5A;
+    background: linear-gradient(to bottom, #FFFFFF, #484848);
+    color: black;
+    
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+main
+{
+    position: relative;
+    
+    margin: auto;
+    padding: inherit;
+    border: inherit;
+    
+    width: 750px;
+    height: 750px;
+    
+    font-size: 0px;
+}
+
+footer
+{
+    position: fixed;
+    
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 24px;
+    
+    text-align: center;
+    font-size: 10px;
+    
+    color: lightgray;
+}
+
+.icon
+{
+    margin-top: 150px;
+    margin-left: 35px;
+    
+    cursor: pointer;
+}
+
+#hide
+{
+    display: block;
+    position: fixed;
+    
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    
+    background: linear-gradient(to bottom, #FFFFFF, #484848);
+    
+    z-index: 10;
+}
+
+#title
+{
+    padding-top: 100px;
+    padding-left: 75px;
+    
+    -webkit-transition: opacity 1s; /* Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+}
+
+#paint
+{
+    -webkit-transition: opacity 1s; /* Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+}
+
+#sketch
+{
+    -webkit-transition: opacity 1s; /* Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+}
+
+#play
+{
+    -webkit-transition: opacity 1s; /* Safari 3.1 to 6.0 */
+    transition: opacity 1s;
+}

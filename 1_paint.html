@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- DIG24 Assignment 3, by Aaron Bramich,
+     Curtin Student #19366050 -->
+
+<html>
+    <head>
+        <title>Paint Sketch Play</title>
+        
+        <meta charset="utf-8">
+        <meta name="application-name" content="Paint Sketch Play"/>
+        <meta name="description" content="Paint"/>
+        <meta name="author" content="Aaron Bramich"/>
+        <meta name="progma" content="no-cache"/>
+        <meta name="viewport" content="initial-scale=0.8, user-scalable=no"/>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/1_paint.css" type="text/css"/>
+    </head>
+    
+    <body id="body_id"
+          onload="fit_screen()"
+          onresize="fit_screen()"
+          ontouchstart="touch_to_mouse(event)"
+          ontouchmove="touch_to_mouse(event)"
+          ontouchend="touch_to_mouse(event)">
+        
+        <!-- hide page until loaded -->
+        <div id="hide"></div>
+        
+        <!-- javascript -->
+        <script src="js/1_paint.js"></script>
+        
+        <!-- preloaded audio files -->
+        <header>
+            <audio id="audio_trash" preload="auto">
+                <source src="./sounds/trash.ogg" type="audio/ogg">
+            </audio>
+            
+            <audio id="audio_black" preload="auto">
+                <source src="./sounds/black.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_white" preload="auto">
+                <source src="./sounds/white.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_brown" preload="auto">
+                <source src="./sounds/brown.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_green" preload="auto">
+                <source src="./sounds/green.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_blue" preload="auto">
+                <source src="./sounds/blue.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_purple" preload="auto">
+                <source src="./sounds/purple.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_pink" preload="auto">
+                <source src="./sounds/pink.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_red" preload="auto">
+                <source src="./sounds/red.ogg" type="audio/ogg">
+            </audio>
+            <audio id="audio_yellow" preload="auto">
+                <source src="./sounds/yellow.ogg" type="audio/ogg">
+            </audio>
+        </header>
+        
+        <!-- go back icon -->
+        <nav>
+            <div class="back_button" onclick="go_to_index()">
+                <img id="goback" alt="home" draggable="false"
+                     src="images/back_arrow_trans.png"/>
+            </div>
+        </nav>
+        
+        <main>
+            <!-- canvas -->
+            <div>
+                <canvas id="canvas" width="750" height="650"
+                        onmousedown="down(event)"
+                        onmousemove="move(event)"
+                        onmouseup="up(event)"
+                        onmouseleave="up(event)">
+                    Your browser does not support the canvas element.
+                </canvas>
+            </div>
+            
+            <!-- colour icons -->
+            <div id="tools">
+                <img id="img_black" class="colour" alt="black"
+                     src="images/pot_black_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_white" class="colour" alt="white"
+                     src="images/pot_white_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_brown" class="colour" alt="brown"
+                     src="images/pot_brown_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_green" class="colour" alt="green"
+                     src="images/pot_green_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_blue" class="colour" alt="blue"
+                     src="images/pot_blue_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_purple" class="colour" alt="purple"
+                     src="images/pot_purple_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_pink" class="colour" alt="pink"
+                     src="images/pot_pink_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_red" class="colour" alt="red"
+                     src="images/pot_red_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+                <img id="img_yellow" class="colour" alt="yellow"
+                     src="images/pot_yellow_trans.png"
+                     onclick="select_colour(event, id)"
+                     draggable="false"/>
+            </div>
+            
+            <!-- trash icon -->
+            <div id="trash">
+                <img id="trashcan" alt="clear" draggable="false"
+                     onclick="clear_canvas()"
+                     src="images/trash_trans.png"/>
+            </div>
+        </main>
+        
+        <footer>
+            <p>All code and content remains property of Aaron Bramich</p>
+        </footer>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- DIG24 Assignment 3, by Aaron Bramich,
+     Curtin Student #19366050 -->
+
+<html>
+    <head>
+        <title>Paint Sketch Play</title>
+        
+        <meta charset="utf-8">
+        <meta name="application-name" content="Paint Sketch Play"/>
+        <meta name="description" content="Home"/>
+        <meta name="author" content="Aaron Bramich"/>
+        <meta name="progma" content="no-cache"/>
+        <meta name="viewport" content="initial-scale=0.8, user-scalable=no"/>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    </head>
+    
+    <body onload="fit_screen()"
+          onresize="fit_screen()">
+        
+        <!-- hide page until loaded -->
+        <div id="hide"></div>
+        
+        <!-- javascript -->
+        <script src="js/index.js"></script>
+        
+        <!-- preloaded audio files -->
+        <header>
+            <audio id="select_icon" preload="auto">
+                <source src="./sounds/paste.ogg" type="audio/ogg">
+            </audio>
+        </header>
+        
+        <nav></nav>
+        
+        <main>
+            <div id="title">
+                <img alt="welcome to paint sketch play"
+                     src="images/title_trans.png"
+                     draggable="false"/>
+            </div>
+            
+            <div id="icons">
+                <img id="paint" class="icon" alt="paint"
+                     src="images/icon_paint_trans.png"
+                     draggable="false" onclick="go_to_paint()"/>
+                <img id="sketch" class="icon" alt="sketch"
+                     src="images/icon_sketch_trans.png"
+                     draggable="false" onclick="go_to_sketch()"/>
+                <img id="play" class="icon" alt="icon"
+                     src="images/icon_play_trans.png"
+                     draggable="false" onclick="go_to_play()"/>
+            </div>
+        </main>
+        
+        <footer>
+            <p>All code and content remains property of Aaron Bramich</p>
+        </footer>
+        
+    </body>
+    
+</html>

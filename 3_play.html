@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- DIG24 Assignment 3, by Aaron Bramich,
+     Curtin Student #19366050 -->
+
+<html>
+    <head>
+        <title>Paint Sketch Play</title>
+        
+        <meta charset="utf-8">
+        <meta name="application-name" content="Paint Sketch Play"/>
+        <meta name="description" content="Play"/>
+        <meta name="author" content="Aaron Bramich"/>
+        <meta name="progma" content="no-cache"/>
+        <meta name="viewport" content="initial-scale=0.8, user-scalable=no"/>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/3_play.css" type="text/css"/>
+    </head>
+    
+    <body id="body_id"
+          onload="fit_screen(), paint()"
+          onresize="fit_screen()"
+          ontouchstart="touch_to_mouse(event)"
+          ontouchmove="touch_to_mouse(event)"
+          ontouchend="touch_to_mouse(event)">
+        
+        <!-- hide page until loaded -->
+        <div id="hide"></div>
+        
+        <!-- javascript -->
+        <script src="js/3_play.js"></script>
+        
+        <!-- preloaded audio files -->
+        <header>
+            <audio id="select_shape" preload="auto">
+                <source src="./sounds/copy.ogg" type="audio/ogg">
+            </audio>
+            <audio id="paste_shape" preload="auto">
+                <source src="./sounds/paste.ogg" type="audio/ogg">
+            </audio>
+        </header>
+        
+        <!-- go back icon -->
+        <nav>
+            <div class="back_button" onclick="go_to_index()">
+                <img id="goback" alt="home" draggable="false"
+                     src="images/back_arrow_trans.png"/>
+            </div>
+        </nav>
+        
+        <main>
+            <div class="puzzle">
+                <!-- canvas -->
+                <canvas id="canvas" width="600" height="750"
+                        onclick="drop(event)"
+                        draggable="false"
+                        ondrop="drop(event)"
+                        ondragover="allow(event)">
+                    Your browser does not support the canvas element.
+                </canvas>
+                
+                <!-- shapes -->
+                <div id="shapes">
+                    <img id="square" class="shape" alt="square"
+                         src="images/shape_square_trans.png"
+                         onclick="drag(event)"
+                         draggable="true"
+                         ondragstart="drag(event)"/>
+                    <img id="triangle" class="shape" alt="triangle"
+                         src="images/shape_triangle_trans.png"
+                         onclick="drag(event)"
+                         draggable="true"
+                         ondragstart="drag(event)"/>
+                    <img id="circle" class="shape" alt="circle"
+                         src="images/shape_circle_trans.png"
+                         onclick="drag(event)"
+                         draggable="true"
+                         ondragstart="drag(event)"/>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>All code and content remains property of Aaron Bramich</p>
+        </footer>
+        
+    </body>
+    
+</html>

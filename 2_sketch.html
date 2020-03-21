@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- DIG24 Assignment 3, by Aaron Bramich,
+     Curtin Student #19366050 -->
+
+<html>
+    <head>
+        <title>Paint Sketch Play</title>
+        
+        <meta charset="utf-8">
+        <meta name="application-name" content="Paint Sketch Play"/>
+        <meta name="description" content="Sketch"/>
+        <meta name="author" content="Aaron Bramich"/>
+        <meta name="progma" content="no-cache"/>
+        <meta name="viewport" content="initial-scale=0.8, user-scalable=no"/>
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/2_sketch.css" type="text/css"/>
+    </head>
+    
+    <body id="body_id"
+          onload="fit_screen(), paint()"
+          onresize="fit_screen()"
+          ontouchstart="touch_to_mouse(event)">
+        
+        <!-- hide page until loaded -->
+        <div id="hide"></div>
+        
+        <!-- javascript -->
+        <script src="js/2_sketch.js"></script>
+        
+        <!-- preloaded audio files -->
+        <header>
+            <audio id="audio_scrape" preload="auto">
+                <source src="./sounds/scrape.ogg" type="audio/ogg">
+            </audio>
+            
+            <audio id="etch" preload="auto">
+                <source src="./sounds/etch.ogg" type="audio/ogg">
+            </audio>
+        </header>
+        
+        <!-- go back icon -->
+        <nav>
+            <div class="back_button" onclick="go_to_index()">
+                <img id="goback" alt="home" draggable="false"
+                     src="images/back_arrow_trans.png"/>
+            </div>
+        </nav>
+        
+        <main>
+            <!-- canvas -->
+            <div>
+                <canvas id="canvas" width="750" height="550">
+                    Your browser does not support the canvas element.
+                </canvas>
+            </div>
+            
+            <!-- etch controls -->
+            <div id="tools">
+                <img id="etch_left" class="control" alt="N,S,E,W"
+                     src="images/etch_left_trans.png"
+                     onclick="mouse_pos(event)" draggable="false"/>
+                <img id="etch_right" class="control" alt="NW,NE,SW,SE"
+                     src="images/etch_right_trans.png"
+                     onclick="mouse_pos(event)" draggable="false"/>
+            </div>
+            
+            <!-- trash icon -->
+            <div id="trash">
+                <img id="trashcan" alt="clear" draggable="false"
+                     onclick="clear_canvas()"
+                     src="images/trash_trans.png"/>
+            </div>
+        </main>
+        
+        <footer>
+            <p>All code and content remains property of Aaron Bramich</p>
+        </footer>
+        
+    </body>
+    
+</html>

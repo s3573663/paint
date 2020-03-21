@@ -1,0 +1,115 @@
+/* DIG24 Assignment 3, by Aaron Bramich, Curtin Student #19366050 */
+
+html
+{
+    font-family: Calibri, Arial, Serif;
+}
+
+body
+{
+    display: block;
+    
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: radial-gradient(#FF8000, #FFC80F);
+    color: black;
+    
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+nav
+{
+    position: fixed;
+    
+    top: 10px;
+    left: 10px;
+    
+    z-index: 1;
+    
+    cursor: pointer;
+}
+
+main
+{
+    position: relative;
+    
+    margin: auto;
+    padding: inherit;
+    border: inherit;
+    
+    width: 750px;
+    height: 750px;
+    
+    font-size: 0px;
+}
+
+footer
+{
+    position: fixed;
+    
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 24px;
+    
+    text-align: center;
+    font-size: 10px;
+    
+    color: black;
+}
+
+#hide
+{
+    display: block;
+    position: fixed;
+    
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    
+    background: radial-gradient(#FF8000, #FFC80F);
+    
+    z-index: 10;
+}
+
+#canvas
+{
+    height: 744px;
+    width: 594px;
+    
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    
+    background-color: white;
+    
+    cursor: pointer;
+}
+
+#shapes
+{
+    height: 750px;
+    width: 150px;
+}
+
+.puzzle
+{
+    display: -webkit-inline-flex; /* Safari all */
+    display: inline-flex;
+}
+
+.shape
+{
+    margin: 25px;
+    
+    cursor: pointer;
+}
